@@ -1,26 +1,12 @@
-# 🏰 Dungeon Adventure RPG
+# 🏰 Dungeon RPG (Python Text Game)
 
-Matnli RPG sarguzasht o‘yini — xazina topish uchun qorong‘i dungeonlarni kezib chiqasiz!  
-Ko‘proq xonalar, dushmanlar, inventar, HP, jumboqlar va tasodifiylik bilan boyitilgan.
-
----
-
-## 🚀 O‘yin imkoniyatlari
-- 🔹 10+ ta turli xonalar (sandiq, kutubxona, tunnel, daryo va h.k.)
-- 🔹 HP va energiya tizimi
-- 🔹 Dushmanlar bilan jang qilish
-- 🔹 Inventar (qurol, ovqat, kalit, suv)
-- 🔹 Topishmoq va jumboqlar
-- 🔹 Har safar yangi tajriba (tasodifiylik)
-- 🔹 Yutuqlar va xazina topish
+Oddiy matnli RPG o'yin — g'orni tadqiq qiling, buyumlar toping va xazinani qo'lga kiriting!  
+GitHub Actions orqali avtomatik `.apk` faylga aylantiriladi.
 
 ---
 
-## 📥 O‘rnatish va ishga tushirish
-
-### 1. Kodni olish
-Telefoningizda **Termux** yoki kompyuterda **git** orqali klon qiling:
-
+## ⚙️ O'rnatish (lokal)
 ```bash
-git clone https://github.com/USERNAME/dungeon-rpg.git
+git clone https://github.com/<sizning-username>/dungeon-rpg.git
 cd dungeon-rpg
+python3 game.py
