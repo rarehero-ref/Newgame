@@ -1,4 +1,9 @@
-name: New Game
+
+---
+
+## `.github/workflows/build.yml`
+```yaml
+name: Build APK
 
 on:
   push:
@@ -14,7 +19,7 @@ jobs:
         uses: actions/checkout@v4
 
       - name: Set up Python
-        uses: actions/setup-python@v4
+        uses: actions/setup-python@v5
         with:
           python-version: "3.10"
 
@@ -24,11 +29,12 @@ jobs:
           sudo apt install -y python3-pip openjdk-17-jdk unzip
           pip install buildozer cython
 
-      - name: Build APK via Buildozer
+      - name: Build APK
         run: |
           buildozer init
           sed -i 's/package.name = myapp/package.name = dungeonrpg/' buildozer.spec
           sed -i 's/package.domain = org.test/package.domain = com.github.username/' buildozer.spec
+          sed -i 's/source.include_exts = py,png,jpg,kv,atlas/source.include_exts = py/' buildozer.spec
           buildozer -v android debug
 
       - name: Upload APK artifact
